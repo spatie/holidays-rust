@@ -5,15 +5,10 @@ weight: 3
 
 Requires Rust 1.89 or newer. Install Rust using [rustup](https://rustup.rs/).
 
-Once the crate is published, add it to your application:
+You can install the package with Cargo:
 
 ```sh
-cargo add {{crate_name}}
+cargo add spatie-holidays
 ```
 
-Before publication, use a local path dependency:
-
-```toml
-[dependencies]
-{{crate_name}} = { path = "../{{repository}}" }
-```
+There are no runtime requirements for PHP, Composer or a system ICU installation. Dates use `chrono::NaiveDate`, re-exported as `spatie_holidays::Date`.

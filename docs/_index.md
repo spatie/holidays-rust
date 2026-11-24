@@ -1,6 +1,6 @@
 ---
 title: v1
-slogan: {{description_quoted}}
-githubUrl: https://github.com/{{owner}}/{{repository}}
+slogan: "Calculate public holidays for a country"
+githubUrl: https://github.com/spatie/holidays-rust
 branch: main
 ---

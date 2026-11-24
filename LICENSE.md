@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) {{year}} {{author_name}} <{{author_email}}>
+Copyright (c) 2026 Freek Van der Herten <freek@spatie.be>
+Copyright (c) spatie <freek@spatie.be>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
