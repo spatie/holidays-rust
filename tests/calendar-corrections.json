@@ -1,0 +1,569 @@
+[
+  {
+    "country": "by",
+    "region": null,
+    "locale": null,
+    "sha256": "a36945f4b4a939b4f396a6ea7e12b6dddf9ffe776899fd6a48fef25e146b5765",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "by",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "a36945f4b4a939b4f396a6ea7e12b6dddf9ffe776899fd6a48fef25e146b5765",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "by",
+    "region": null,
+    "locale": "be-latn",
+    "sha256": "6e72895a1cf4c628464dc356794c3db9a17b96d9a1b9d8a92d9bde35cc12b6ee",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "by",
+    "region": null,
+    "locale": "en",
+    "sha256": "1eae395729274e813343ba790ddcab150b8028f76539d016f7ad4f8cc798efe1",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "by",
+    "region": null,
+    "locale": "ru",
+    "sha256": "03dbc9747c1c710d1224a452085b7d159300c6d11398f12ba49809c3b0a89049",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "bg",
+    "region": null,
+    "locale": null,
+    "sha256": "a56bdbf78325e65c999da8a6f15832361a3258b2393c4cb5a8cab539335539f5",
+    "reason": "tools/calendar-sources.md: Bulgaria"
+  },
+  {
+    "country": "bg",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "a56bdbf78325e65c999da8a6f15832361a3258b2393c4cb5a8cab539335539f5",
+    "reason": "tools/calendar-sources.md: Bulgaria"
+  },
+  {
+    "country": "bg",
+    "region": null,
+    "locale": "en",
+    "sha256": "cc35799bbab92dd69d61d29cabf7b74aa5e34da6e3b16f2aecc41cce24a2a3c1",
+    "reason": "tools/calendar-sources.md: Bulgaria"
+  },
+  {
+    "country": "cl",
+    "region": null,
+    "locale": null,
+    "sha256": "6e75ffa890c4267c672d193869603ca52423c25d4f0cc511096b5ef3fb40591a",
+    "reason": "tools/calendar-sources.md: Chile"
+  },
+  {
+    "country": "cl",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "6e75ffa890c4267c672d193869603ca52423c25d4f0cc511096b5ef3fb40591a",
+    "reason": "tools/calendar-sources.md: Chile"
+  },
+  {
+    "country": "ge",
+    "region": null,
+    "locale": null,
+    "sha256": "4492c0bfd997c7995bfd05a67290e5d6f962ed746b0b10482d39343303137229",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "ge",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "4492c0bfd997c7995bfd05a67290e5d6f962ed746b0b10482d39343303137229",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "ge",
+    "region": null,
+    "locale": "en",
+    "sha256": "25c4d87f17d0b4d5b2c1d33dd3cd3477caf5cd3d1a9e243be6b04e4e88563c39",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "gr",
+    "region": null,
+    "locale": null,
+    "sha256": "43ce62fa95890af619fccffa62a2fcd3f9455b71f6f373fa77954b9590747375",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "gr",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "43ce62fa95890af619fccffa62a2fcd3f9455b71f6f373fa77954b9590747375",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "el",
+    "region": null,
+    "locale": null,
+    "sha256": "43ce62fa95890af619fccffa62a2fcd3f9455b71f6f373fa77954b9590747375",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "el",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "43ce62fa95890af619fccffa62a2fcd3f9455b71f6f373fa77954b9590747375",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "hk",
+    "region": null,
+    "locale": null,
+    "sha256": "056d2a5c433312aee9ef89dfb881e44c988dbef164d006ac813a9974a087bbd6",
+    "reason": "tools/calendar-sources.md: Chinese-calendar dates"
+  },
+  {
+    "country": "hk",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "056d2a5c433312aee9ef89dfb881e44c988dbef164d006ac813a9974a087bbd6",
+    "reason": "tools/calendar-sources.md: Chinese-calendar dates"
+  },
+  {
+    "country": "hk",
+    "region": null,
+    "locale": "en",
+    "sha256": "6add0dbabb8af3a511289689a4f85f4d54c32821e2f25a1c18ce218b6b0b5342",
+    "reason": "tools/calendar-sources.md: Chinese-calendar dates"
+  },
+  {
+    "country": "id",
+    "region": null,
+    "locale": null,
+    "sha256": "a41da0636ad088b6fdccfa81c85024d548f6500827e71ac0c11f54cc68ac9688",
+    "reason": "tools/calendar-sources.md: Chinese-calendar dates"
+  },
+  {
+    "country": "id",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "a41da0636ad088b6fdccfa81c85024d548f6500827e71ac0c11f54cc68ac9688",
+    "reason": "tools/calendar-sources.md: Chinese-calendar dates"
+  },
+  {
+    "country": "kr",
+    "region": null,
+    "locale": null,
+    "sha256": "5f30e72c38e6b6c840abdc035f7a7e7a4bce233b43a16fdc9abd7dcc09775a04",
+    "reason": "tools/calendar-sources.md: Chinese-calendar dates"
+  },
+  {
+    "country": "kr",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "5f30e72c38e6b6c840abdc035f7a7e7a4bce233b43a16fdc9abd7dcc09775a04",
+    "reason": "tools/calendar-sources.md: Chinese-calendar dates"
+  },
+  {
+    "country": "xk",
+    "region": null,
+    "locale": null,
+    "sha256": "6d1a7904db419f962026f48012345d075fb4b577e9eb975e63af61c7808c2daf",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "xk",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "6d1a7904db419f962026f48012345d075fb4b577e9eb975e63af61c7808c2daf",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "my",
+    "region": null,
+    "locale": null,
+    "sha256": "90e3ec328dd159a87624eec736bba1585dfa37bd22bf99723839fc026c688b80",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "90e3ec328dd159a87624eec736bba1585dfa37bd22bf99723839fc026c688b80",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "jhr",
+    "locale": null,
+    "sha256": "033f82ae51be0bf2540a4b8dc7f1731edaf376c6a0726d8fcb996697a0aa1d8b",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "jhr",
+    "locale": "unknown",
+    "sha256": "033f82ae51be0bf2540a4b8dc7f1731edaf376c6a0726d8fcb996697a0aa1d8b",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "kdh",
+    "locale": null,
+    "sha256": "0384394b249f6e21ff514dff0ee65cde985257ff5e65038e9cea2ac0a9831967",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "kdh",
+    "locale": "unknown",
+    "sha256": "0384394b249f6e21ff514dff0ee65cde985257ff5e65038e9cea2ac0a9831967",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "ktn",
+    "locale": null,
+    "sha256": "1ce5a5bfb53854e7da9cb0598a0fe87de9c7804fbf86b1930e702beca7c2a8f1",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "ktn",
+    "locale": "unknown",
+    "sha256": "1ce5a5bfb53854e7da9cb0598a0fe87de9c7804fbf86b1930e702beca7c2a8f1",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "kul",
+    "locale": null,
+    "sha256": "99bdb7b2de4bf1d79a8645e5c7bd23a6347462b5a21f2cac113eb10adefb7303",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "kul",
+    "locale": "unknown",
+    "sha256": "99bdb7b2de4bf1d79a8645e5c7bd23a6347462b5a21f2cac113eb10adefb7303",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "lbn",
+    "locale": null,
+    "sha256": "782d8b9089f699dbb0fd44d0d9a3dba1be95f359705d6298b701172b4fd862b4",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "lbn",
+    "locale": "unknown",
+    "sha256": "782d8b9089f699dbb0fd44d0d9a3dba1be95f359705d6298b701172b4fd862b4",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "mlk",
+    "locale": null,
+    "sha256": "f72ce11385a141b3cdf82599607327036821aa9d06b2df3210a208c7800b765a",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "mlk",
+    "locale": "unknown",
+    "sha256": "f72ce11385a141b3cdf82599607327036821aa9d06b2df3210a208c7800b765a",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "nsn",
+    "locale": null,
+    "sha256": "dcca6f44a2eda97216f1b500bc804bff0f3935b317b6edc1c330604e697ecaf4",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "nsn",
+    "locale": "unknown",
+    "sha256": "dcca6f44a2eda97216f1b500bc804bff0f3935b317b6edc1c330604e697ecaf4",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "phg",
+    "locale": null,
+    "sha256": "07d2477def453ff1da5091692950e8e31a45549d3dc7b5fcc182a45731bb8154",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "phg",
+    "locale": "unknown",
+    "sha256": "07d2477def453ff1da5091692950e8e31a45549d3dc7b5fcc182a45731bb8154",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "png",
+    "locale": null,
+    "sha256": "397035feae741e89f1a81c102526a1f277f3d9edc736b474deab7c32c674216a",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "png",
+    "locale": "unknown",
+    "sha256": "397035feae741e89f1a81c102526a1f277f3d9edc736b474deab7c32c674216a",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "prk",
+    "locale": null,
+    "sha256": "2d93fbdbd3cb903537f87952beb6982a0f3bc9beb7ece01e649c87fec0e1e516",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "prk",
+    "locale": "unknown",
+    "sha256": "2d93fbdbd3cb903537f87952beb6982a0f3bc9beb7ece01e649c87fec0e1e516",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "pls",
+    "locale": null,
+    "sha256": "3d357e8ca94b246ab1849cd0e6106759c0e3d3c5514a1499e58008366ab7e144",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "pls",
+    "locale": "unknown",
+    "sha256": "3d357e8ca94b246ab1849cd0e6106759c0e3d3c5514a1499e58008366ab7e144",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "pjy",
+    "locale": null,
+    "sha256": "04f69c17f701075180ee97cdf117d81d01be41df8e7984a57b4833a4dbf9668d",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "pjy",
+    "locale": "unknown",
+    "sha256": "04f69c17f701075180ee97cdf117d81d01be41df8e7984a57b4833a4dbf9668d",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "sbh",
+    "locale": null,
+    "sha256": "16630663eb8e32f1b388ca650f49cdb9039302064b9c391388413d5ddc86f3ba",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "sbh",
+    "locale": "unknown",
+    "sha256": "16630663eb8e32f1b388ca650f49cdb9039302064b9c391388413d5ddc86f3ba",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "swk",
+    "locale": null,
+    "sha256": "1915e0cfb7d283d6bbea9d1a5845013f2196a76d8cf461f708bca8caa09a6ce1",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "swk",
+    "locale": "unknown",
+    "sha256": "1915e0cfb7d283d6bbea9d1a5845013f2196a76d8cf461f708bca8caa09a6ce1",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "sgr",
+    "locale": null,
+    "sha256": "d07221f3fd915abbb048faeedd390ab48cfda47b72751d70c02d79f845f8768b",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "sgr",
+    "locale": "unknown",
+    "sha256": "d07221f3fd915abbb048faeedd390ab48cfda47b72751d70c02d79f845f8768b",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "trg",
+    "locale": null,
+    "sha256": "c587c5d4b8960ef030b51f355d73c81611ca905b9f0a33d985701c1f7cc9b4f7",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "my",
+    "region": "trg",
+    "locale": "unknown",
+    "sha256": "c587c5d4b8960ef030b51f355d73c81611ca905b9f0a33d985701c1f7cc9b4f7",
+    "reason": "tools/calendar-sources.md: Malaysia"
+  },
+  {
+    "country": "mx",
+    "region": null,
+    "locale": null,
+    "sha256": "004803f80b8869d2508eccc84f5bce064dce4021149ccc60fea774a0aa00d60e",
+    "reason": "tools/calendar-sources.md: Mexico"
+  },
+  {
+    "country": "mx",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "004803f80b8869d2508eccc84f5bce064dce4021149ccc60fea774a0aa00d60e",
+    "reason": "tools/calendar-sources.md: Mexico"
+  },
+  {
+    "country": "md",
+    "region": null,
+    "locale": null,
+    "sha256": "b90bf4d77994f996cc15e61102cde62afec7e209c557c0e6b333e678dbe1b743",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "md",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "b90bf4d77994f996cc15e61102cde62afec7e209c557c0e6b333e678dbe1b743",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "me",
+    "region": null,
+    "locale": null,
+    "sha256": "d51c0692ab339a826f72b5a33aeec1e5b6138b2b7ca61e9bd87033730c8f6d0f",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "me",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "d51c0692ab339a826f72b5a33aeec1e5b6138b2b7ca61e9bd87033730c8f6d0f",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "me",
+    "region": null,
+    "locale": "en",
+    "sha256": "3fca5283a282c4c7dd42b91c7706a167a22fe4c73962de1c5c9b667846f13d1c",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "mk",
+    "region": null,
+    "locale": null,
+    "sha256": "b2301442a8c515274622396aabe7f045fcd6c3d0bd7da018f0f144ae389251b8",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "mk",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "b2301442a8c515274622396aabe7f045fcd6c3d0bd7da018f0f144ae389251b8",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "ro",
+    "region": null,
+    "locale": null,
+    "sha256": "b1ee70059a70b68cfa63f910012051c6a12d2b3e4b9cff46454e87b723e33480",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "ro",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "b1ee70059a70b68cfa63f910012051c6a12d2b3e4b9cff46454e87b723e33480",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "sr",
+    "region": null,
+    "locale": null,
+    "sha256": "35b437033416530e17f05f997d3f77d2a82dc47350f6122b51499be3216ba345",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "sr",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "35b437033416530e17f05f997d3f77d2a82dc47350f6122b51499be3216ba345",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "tw",
+    "region": null,
+    "locale": null,
+    "sha256": "21a05dc7eba24280d753d29191f28cdd4e098f4b02653a34de0d2494e0faedf2",
+    "reason": "tools/calendar-sources.md: Chinese-calendar dates"
+  },
+  {
+    "country": "tw",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "21a05dc7eba24280d753d29191f28cdd4e098f4b02653a34de0d2494e0faedf2",
+    "reason": "tools/calendar-sources.md: Chinese-calendar dates"
+  },
+  {
+    "country": "tw",
+    "region": null,
+    "locale": "en",
+    "sha256": "32667bb1c6fccd5d6c6dcbe84daf663ce275e434076ef22d3410a67fb2e788db",
+    "reason": "tools/calendar-sources.md: Chinese-calendar dates"
+  },
+  {
+    "country": "ua",
+    "region": null,
+    "locale": null,
+    "sha256": "a3db8b7b5b6d7bd21f738a82177e0f4377d61ede463f9d51245dcdbeffbc72a6",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "ua",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "a3db8b7b5b6d7bd21f738a82177e0f4377d61ede463f9d51245dcdbeffbc72a6",
+    "reason": "tools/calendar-sources.md: Greece and Orthodox Easter"
+  },
+  {
+    "country": "vn",
+    "region": null,
+    "locale": null,
+    "sha256": "203856c4e837704a3159cce6a5ea75c1e4c42eeb9983e74c6a79c6a48fb1b195",
+    "reason": "tools/calendar-sources.md: Chinese-calendar dates"
+  },
+  {
+    "country": "vn",
+    "region": null,
+    "locale": "unknown",
+    "sha256": "203856c4e837704a3159cce6a5ea75c1e4c42eeb9983e74c6a79c6a48fb1b195",
+    "reason": "tools/calendar-sources.md: Chinese-calendar dates"
+  },
+  {
+    "country": "vn",
+    "region": null,
+    "locale": "en",
+    "sha256": "58301a1fdeeca9f7bf3bda32752acf855970fcf0a50cd4dafe8ac106a82ac475",
+    "reason": "tools/calendar-sources.md: Chinese-calendar dates"
+  }
+]

@@ -19,16 +19,41 @@ struct Row {
     sha256: String,
 }
 
+#[derive(Deserialize)]
+struct Correction {
+    country: String,
+    region: Option<String>,
+    locale: Option<String>,
+    sha256: String,
+    reason: String,
+}
+
 #[test]
-fn matches_php_for_every_country_region_locale_and_two_hundred_years() {
+fn checks_every_calendar_against_the_reference_and_sourced_corrections() {
     let fixture: Fixture = serde_json::from_str(include_str!("php-parity.json")).unwrap();
+    let corrections: Vec<Correction> =
+        serde_json::from_str(include_str!("calendar-corrections.json")).unwrap();
     assert_eq!(
         fixture.reference,
         "9557c35f121e27f473bcd6c8958826a205ffa449"
     );
     let mut cases = 0;
     let mut failures = Vec::new();
+    let mut corrected_groups = 0;
     for row in &fixture.rows {
+        let correction = corrections.iter().find(|correction| {
+            correction.country == row.country
+                && correction.region == row.region
+                && correction.locale == row.locale
+        });
+        let expected = if let Some(correction) = correction {
+            assert!(!correction.reason.is_empty());
+            assert_ne!(correction.sha256, row.sha256);
+            corrected_groups += 1;
+            &correction.sha256
+        } else {
+            &row.sha256
+        };
         let mut hash = Sha256::new();
         let mut successful_years = 0;
         for year in &fixture.years {
@@ -59,12 +84,13 @@ fn matches_php_for_every_country_region_locale_and_two_hundred_years() {
             cases += 1;
         }
         let digest = format!("{:x}", hash.finalize());
-        if digest != row.sha256 || successful_years != row.successful_years {
+        if &digest != expected || successful_years != row.successful_years {
             failures.push(format!(
                 "{row:?}: got {digest}, {successful_years} successful years"
             ));
         }
     }
+    assert_eq!(corrected_groups, corrections.len(), "unused correction");
     assert!(
         failures.is_empty(),
         "{} groups differ across {cases} cases:\n{}",
@@ -72,7 +98,7 @@ fn matches_php_for_every_country_region_locale_and_two_hundred_years() {
         failures.join("\n")
     );
     eprintln!(
-        "Matched {cases} PHP cases across {} calendar configurations",
-        fixture.rows.len()
+        "Checked {cases} cases across {} configurations, including {corrected_groups} sourced correction groups",
+        fixture.rows.len(),
     );
 }

@@ -1,7 +1,6 @@
 #![doc = include_str!("../README.md")]
 
 mod calendar;
-mod chinese;
 mod countries;
 
 pub use chrono::NaiveDate as Date;

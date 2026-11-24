@@ -21,7 +21,7 @@ let holiday = Holiday {
 # assert_eq!(holiday.name, "New Year's Day");
 ```
 
-The internal `calendar` module owns Easter, Orthodox Easter, relative weekdays, multi-day periods and substitute-day helpers. The `chinese` module contains the astronomical Chinese calendar calculation. Islamic civil conversion uses the tabular Islamic calendar. Some holidays depend on official announcements; retain those dated source records and reject years where the required data is unavailable.
+The internal `calendar` module owns Easter, Orthodox Easter, relative weekdays, multi-day periods and substitute-day helpers. Chinese calendar conversion uses ICU4X's traditional Chinese calendar. Islamic civil conversion uses the tabular Islamic calendar. Some holidays depend on official announcements; retain those dated source records and reject years where the required data is unavailable.
 
 ## Register your country
 
@@ -45,4 +45,4 @@ Translations are in `src/translations.json`, grouped by canonical country code a
 
 ## Testing
 
-Add public API cases for the rule's boundaries. If porting a PHP calendar, regenerate the independent [differential fixtures](testing.md) against the pinned upstream revision and inspect every changed result. A new rule needs an official source and a test that distinguishes it from the previous rule. Run the quality checks on both stable Rust and the minimum supported version.
+Add public API cases for the rule's boundaries. A new rule needs an official source and a test that distinguishes it from the previous rule. Run the quality checks in [testing](testing.md) on both stable Rust and the minimum supported version.

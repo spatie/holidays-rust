@@ -166,19 +166,19 @@ pub(crate) fn date_is(day: Date, target: &str) -> bool {
     }
 }
 pub(crate) fn easter(year: i32, orthodox: bool) -> Result<Date, Error> {
-    // PHP's default switches from Julian to Gregorian in 1753. Its Orthodox
-    // helper always adds Julian Easter's offset to Gregorian April 3.
+    // Convert Julian Easter to the public Gregorian date, including century changes.
     if orthodox || year <= 1752 {
         let a = year.rem_euclid(4);
         let b = year.rem_euclid(7);
         let c = year.rem_euclid(19);
         let d = (19 * c + 15).rem_euclid(30);
         let e = (2 * a + 4 * b - d + 34).rem_euclid(7);
-        return Ok(date(
-            year,
-            if orthodox { 4 } else { 3 },
-            if orthodox { 3 } else { 21 },
-        )? + Duration::days(i64::from(d + e + 1)));
+        let offset = if orthodox {
+            year / 100 - year / 400 - 2
+        } else {
+            0
+        };
+        return Ok(date(year, 3, 22)? + Duration::days(i64::from(d + e + offset)));
     }
     let a = year % 19;
     let b = year / 100;
@@ -312,7 +312,14 @@ pub(crate) fn chinese_to_gregorian_date(input: &str, year: i32) -> Result<Date, 
         .parse()
         .map_err(|_| Error::InvalidDate(input.into()))?;
     let day = day.parse().map_err(|_| Error::InvalidDate(input.into()))?;
-    crate::chinese::to_gregorian(year, month, day)
+    let converted = icu_calendar::Date::try_new_chinese_traditional(
+        year,
+        icu_calendar::types::Month::new(month),
+        day,
+    )
+    .map_err(|_| Error::Calculation(input.into()))?;
+    Date::from_num_days_from_ce_opt(converted.to_rata_die().to_i64_date() as i32)
+        .ok_or(Error::UnsupportedYear)
 }
 
 pub(crate) fn islamic_to_gregorian_date(

@@ -212,3 +212,110 @@ fn uses_date_only_lunar_rules_without_historical_timezone_database_disagreement(
         .unwrap();
     assert_eq!(new_year.date, date("1900-01-31"));
 }
+
+#[test]
+fn calculates_sourced_calendar_dates_instead_of_inheriting_reference_errors() {
+    // Sources and the boundaries each example exercises are in tools/calendar-sources.md.
+    for (country, year, name, expected) in [
+        ("cl", 2025, "Viernes Santo", "2025-04-18"),
+        ("cl", 2025, "Sábado Santo", "2025-04-19"),
+        (
+            "cl",
+            2026,
+            "Día Nacional de los Pueblos Indígenas",
+            "2026-06-21",
+        ),
+        (
+            "cl",
+            2025,
+            "Día Nacional de los Pueblos Indígenas",
+            "2025-06-20",
+        ),
+        (
+            "cl",
+            2021,
+            "Día Nacional de los Pueblos Indígenas",
+            "2021-06-21",
+        ),
+        ("cl", 2025, "Encuentro de Dos Mundos", "2025-10-12"),
+        ("cl", 2027, "San Pedro y San Pablo", "2027-06-28"),
+        ("cl", 2029, "San Pedro y San Pablo", "2029-07-02"),
+        ("cl", 2023, "Día de las Iglesias Evangélicas", "2023-10-27"),
+        ("cl", 2029, "Día de las Iglesias Evangélicas", "2029-11-02"),
+        (
+            "cl",
+            2024,
+            "Feriado añadido de Fiestas Patrias",
+            "2024-09-20",
+        ),
+        (
+            "cl",
+            2027,
+            "Feriado añadido de Fiestas Patrias",
+            "2027-09-17",
+        ),
+        ("mx", 2024, "Día de la Constitución", "2024-02-05"),
+        ("mx", 2005, "Día de la Constitución", "2005-02-05"),
+        ("mx", 2006, "Día de la Constitución", "2006-02-06"),
+        ("mx", 2006, "Natalicio de Benito Juárez", "2006-03-21"),
+        ("mx", 2007, "Natalicio de Benito Juárez", "2007-03-19"),
+        ("mx", 2024, "Natalicio de Benito Juárez", "2024-03-18"),
+        ("mx", 2024, "Día de la Revolución", "2024-11-18"),
+        ("mx", 2018, "Cambio de Gobierno", "2018-12-01"),
+        ("mx", 2024, "Cambio de Gobierno", "2024-10-01"),
+        (
+            "my",
+            2016,
+            "Hari Keputeraan Yang Di-Pertuan Agong",
+            "2016-06-04",
+        ),
+        (
+            "my",
+            2018,
+            "Hari Keputeraan Yang Di-Pertuan Agong",
+            "2018-09-09",
+        ),
+        (
+            "my",
+            2020,
+            "Hari Keputeraan Yang Di-Pertuan Agong",
+            "2020-06-08",
+        ),
+        (
+            "my",
+            2024,
+            "Hari Keputeraan Yang Di-Pertuan Agong",
+            "2024-06-03",
+        ),
+        ("my", 2023, "Hari Deepavali", "2023-11-12"),
+        ("my", 2024, "Hari Deepavali", "2024-10-31"),
+        ("my", 2027, "Tahun Baru Cina", "2027-02-06"),
+        ("hk", 2027, "農曆年初一", "2027-02-06"),
+        ("hk", 2027, "農曆年初三", "2027-02-08"),
+        ("hk", 2027, "農曆年初四", "2027-02-09"),
+        ("gr", 2024, "Πρωτομαγιά", "2024-05-07"),
+        ("gr", 1900, "Κυριακή του Πάσχα", "1900-04-22"),
+        ("gr", 2100, "Κυριακή του Πάσχα", "2100-05-02"),
+    ] {
+        let holidays = Holidays::for_country(country, year).unwrap().get().unwrap();
+        assert!(
+            holidays
+                .iter()
+                .any(|holiday| holiday.name == name && holiday.date == date(expected)),
+            "{country} {year}: expected {name} on {expected}, got {holidays:?}"
+        );
+    }
+    let chile = Holidays::for_country("cl", 2025).unwrap().get().unwrap();
+    assert!(
+        !chile
+            .iter()
+            .any(|h| h.name == "Feriado añadido de Fiestas Patrias")
+    );
+    for (year, substituted) in [(2016, false), (2017, true)] {
+        let holidays = Holidays::for_country("bg", year).unwrap().get().unwrap();
+        assert_eq!(
+            holidays.iter().any(|h| h.name.contains("неприсъствен ден")),
+            substituted
+        );
+    }
+}

@@ -7,7 +7,11 @@ impl Rules<'_> {
         let fixed_holidays = self.fixed_holidays(year)?;
         Ok([
             fixed_holidays.clone(),
-            self.substitute_holidays(fixed_holidays.clone())?,
+            if year >= 2017 {
+                self.substitute_holidays(fixed_holidays.clone())?
+            } else {
+                Vec::new()
+            },
             self.variable_holidays(year)?,
         ]
         .concat())

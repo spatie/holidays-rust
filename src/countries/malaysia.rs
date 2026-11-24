@@ -897,10 +897,11 @@ impl Rules<'_> {
         Ok((easter) + Duration::days(i64::from(-(2))))
     }
     pub(super) fn hari_keputeraan_ydp(&self, year: i32) -> Result<Option<Date>, Error> {
-        Ok(match () {
-            _ if (((2001..=2026).collect::<Vec<_>>()).contains(&(year))) => Some(parse_date(
-                &(format!("first saturday of october {}", year)),
-            )?),
+        Ok(match year {
+            2001..=2016 => Some(parse_date(&format!("first saturday of june {year}"))?),
+            2017..=2019 => Some(super::date(year, 9, 9)?),
+            2020 => Some(super::date(year, 6, 8)?),
+            2021.. => Some(parse_date(&format!("first monday of june {year}"))?),
             _ => None,
         })
     }
@@ -949,8 +950,8 @@ impl Rules<'_> {
             (2020, vec!["11-14".to_owned()]),
             (2021, vec!["11-04".to_owned()]),
             (2022, vec!["10-24".to_owned()]),
-            (2023, vec!["11-13".to_owned()]),
-            (2024, vec!["11-01".to_owned()]),
+            (2023, vec!["11-12".to_owned()]),
+            (2024, vec!["10-31".to_owned()]),
             (2025, vec!["10-20".to_owned()]),
             (2026, vec!["11-08".to_owned()]),
         ]))

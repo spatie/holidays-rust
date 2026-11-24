@@ -36,12 +36,21 @@ impl Rules<'_> {
         .concat())
     }
     pub(super) fn variable_holidays(&self, year: i32) -> Result<Vec<Holiday>, Error> {
-        let constitution_day =
-            (parse_date(&(format!("first monday of february {}", year)))?) - Duration::days(1);
-        let benito_juarez_birth =
-            (parse_date(&(format!("third monday of March {}", year)))?) - Duration::days(1);
-        let revolution_day =
-            (parse_date(&(format!("third monday of november {}", year)))?) - Duration::days(1);
+        let constitution_day = if year >= 2006 {
+            parse_date(&format!("first monday of february {year}"))?
+        } else {
+            super::date(year, 2, 5)?
+        };
+        let benito_juarez_birth = if year >= 2007 {
+            parse_date(&format!("third monday of march {year}"))?
+        } else {
+            super::date(year, 3, 21)?
+        };
+        let revolution_day = if year >= 2006 {
+            parse_date(&format!("third monday of november {year}"))?
+        } else {
+            super::date(year, 11, 20)?
+        };
         let mut holidays = vec![
             Holiday {
                 name: "Día de la Constitución".to_owned(),
@@ -75,8 +84,12 @@ impl Rules<'_> {
     }
     pub(super) fn government_change_date(&self, year: i32) -> Result<Option<Date>, Error> {
         let base_year = 1946;
-        if (((year) - (base_year)) % (6)) == (0) {
-            return Ok(Some((super::date(year, 10, 1)?) - Duration::days(1)));
+        if year >= base_year && (year - base_year) % 6 == 0 {
+            return Ok(Some(if year >= 2024 {
+                super::date(year, 10, 1)?
+            } else {
+                super::date(year, 12, 1)?
+            }));
         }
         Ok(None)
     }

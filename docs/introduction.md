@@ -17,6 +17,6 @@ assert_eq!(holidays[0].holiday_type, HolidayType::National);
 # }
 ```
 
-This is a native Rust port of [spatie/holidays](https://github.com/spatie/holidays), including every country, regional rule and translation in the pinned PHP reference. It calculates relative dates, Easter, lunar holidays and observed days using rules. Calendars whose PHP implementations use official year-specific data retain those same limits.
+This package supports 104 countries, regional calendars and 50 translation files. It calculates relative dates, Easter, lunar holidays and observed days using rules. Calendars that need official year-specific data have supported-year limits.
 
-Continue with [installation](installation-and-setup.md) and [usage](usage.md). The [compatibility notes](compatibility.md) record the PHP reference, verification, supported-year limits and questionable upstream behavior.
+Continue with [installation](installation-and-setup.md) and [usage](usage.md), including calendar coverage and supported-year limits.

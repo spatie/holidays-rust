@@ -43,7 +43,7 @@ We support the countries listed in [this directory](https://github.com/spatie/ho
 
 Countries that support regions: Australia, Bosnia and Herzegovina, Brazil, France, Germany, Malaysia, Portugal, Spain, Switzerland. Portugal supports all 308 municipalities.
 
-Some calendars are limited to particular years or omit categories of leave. Read the [calendar coverage and compatibility notes](https://spatie.be/docs/holidays-rust/v1/compatibility) before relying on results. The port preserves upstream behavior, including documented questionable rules; it is not an independent legal authority.
+Some calendars are limited to particular years or omit categories of leave. Read [calendar coverage](https://spatie.be/docs/holidays-rust/v1/usage#calendar-coverage) before relying on results. Check official announcements for legal or payroll decisions.
 
 ## Usage
 
@@ -98,4 +98,4 @@ Report vulnerabilities privately using the instructions in [SECURITY.md](https:/
 
 The MIT License (MIT). See [LICENSE.md](https://github.com/spatie/holidays-rust/blob/main/LICENSE.md).
 
-The Chinese calendar calculation adapts ICU's astronomical algorithms under the [Unicode License](https://github.com/spatie/holidays-rust/blob/main/UNICODE-LICENSE.txt).
+The Chinese calendar calculation uses [ICU4X](https://github.com/unicode-org/icu4x) under the [Unicode License](https://github.com/spatie/holidays-rust/blob/main/UNICODE-LICENSE.txt).

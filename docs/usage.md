@@ -43,11 +43,11 @@ let holidays = Holidays::for_country("be", 2024)?.get()?;
 # }
 ```
 
-Years use the Gregorian calendar. Each country retains its PHP supported-year limits; unavailable data returns an error rather than an incomplete substitute calendar.
+Years use the Gregorian calendar. Country-specific supported-year limits apply; unavailable data returns an error rather than an incomplete substitute calendar.
 
 ### Getting holidays between two dates
 
-The `get_in_range` method returns all holidays between two dates (inclusive). Dates are swappable; the lower date is always used as the start. Use `get_in_range_str` for the PHP shorthand formats:
+The `get_in_range` method returns all holidays between two dates (inclusive). Dates are swappable; the lower date is always used as the start. Use `get_in_range_str` for ISO year, month or date strings:
 
 ```rust
 # use spatie_holidays::{Error, Holidays};
@@ -78,7 +78,7 @@ let holidays = Holidays::for_country("be", 2024)?.locale("fr").get()?;
 # }
 ```
 
-If no translation file exists for the given locale, the original holiday names are returned. Omitting the locale preserves the country's default locale, where the PHP package defines one. All 50 original translation files are included.
+If no translation file exists for the given locale, the original holiday names are returned. Omitting the locale uses the country's default locale when one is defined. There are 50 translation files.
 
 ### Regional holidays
 
@@ -119,7 +119,7 @@ let holidays = Holidays::for_country("pt", 2024)?.region("PT-1106")?.get()?;
 
 All 308 municipalities are supported. These are municipal DICO codes, not ISO 3166-2 district codes. Without a region, only national holidays are returned. Holidays applying to the whole autonomous region of Madeira or the Azores are not currently included.
 
-Countries that support regions: Australia, Bosnia and Herzegovina, Brazil, France, Germany, Malaysia, Portugal, Spain, Switzerland. Region codes are case-sensitive, as in PHP. Countries without regional calendars ignore a supplied region. Malaysia without a region includes and deduplicates all its regional holidays, matching PHP.
+Countries that support regions: Australia, Bosnia and Herzegovina, Brazil, France, Germany, Malaysia, Portugal, Spain, Switzerland. Region codes are case-sensitive. Countries without regional calendars ignore a supplied region. Malaysia without a region includes and deduplicates all its regional holidays.
 
 ### Determining if a date is a holiday
 
@@ -160,7 +160,7 @@ for holiday in holidays {
 # }
 ```
 
-This returns the next three holidays, including today if it is a holiday. `get_upcoming_from(date, count)` uses an explicit starting date. Both operations can cross years and ignore the configured year, as PHP does. A count of zero returns an empty vector.
+This returns the next three holidays, including today if it is a holiday. `get_upcoming_from(date, count)` uses an explicit starting date. Both operations can cross years and ignore the configured year. A count of zero returns an empty vector.
 
 ### Getting long weekends
 
@@ -180,7 +180,7 @@ for weekend in long_weekends {
 # }
 ```
 
-This preserves PHP's grouping algorithm. It groups successive holidays separated by no more than the supplied minimum days, then keeps groups with at least two holidays whose inclusive span meets that minimum. It does not calculate which weekends or working days require time off.
+This groups successive holidays separated by no more than the supplied minimum days, then keeps groups with at least two holidays whose inclusive span meets that minimum. It does not calculate which weekends or working days require time off.
 
 ### Getting the name of a holiday
 
@@ -219,8 +219,20 @@ let holidays = Holidays::for_country("de", 2024)?
 # }
 ```
 
-### Errors and Rust API differences
+### Errors and date inputs
 
-Configuration uses consuming builders. Keep the returned `Holidays` value or chain the calls. Unknown countries and invalid regions return typed errors. Supported-year checks happen when holidays are calculated, since different countries have different limits. Date inputs are typed `Date` values; string range endpoints accept ISO year, month or date formats rather than Carbon's natural-language parser.
+Configuration uses consuming builders. Keep the returned `Holidays` value or chain the calls. Unknown countries and invalid regions return typed errors. Supported-year checks happen when holidays are calculated, since different countries have different limits. Date inputs are typed `Date` values; string range endpoints accept ISO year, month or date formats.
 
-PHP optional arguments map to explicit Rust operations: `for_current_year` or `for_country`, `get` or `get_by_type`, and `get_upcoming` or `get_upcoming_from`. `get_long_weekends` takes its minimum explicitly; pass `4` for PHP's default. `Holiday` fields are owned values rather than shared mutable objects. Custom PHP country subclasses and runtime registry mutation are not Rust extension mechanisms; see [adding a country](adding-a-country.md) for repository contributions.
+Upcoming queries stop at year 9999 and return an error when they cannot collect enough holidays. See [adding a country](adding-a-country.md) to contribute a calendar.
+
+## Calendar coverage
+
+Saudi Arabia (`sa`) supports 2020 to 2037 and returns statutory private-sector holidays under [Article 24 of the Saudi Labor Law's implementing regulations](https://www.hrsd.gov.sa/en/knowledge-centre/articles/322). Eid dates follow Umm al-Qura. Eid al-Fitr leave begins the day after 29 Ramadan, which can precede 1 Shawwal. Public-sector, banking and employer-specific compensatory leave are not included.
+
+Taiwan (`tw`) follows the [DGPA government-office calendar](https://data.gov.tw/dataset/14718) for 2020 to 2027, including compensatory and adjusted days off as `HolidayType::Observed`. Ordinary weekends and make-up working Saturdays are not listed. Same-day holidays are returned separately. This is not a private-sector employment calendar. Outside that window, only the basic fixed and lunar holidays are calculated; Lunar New Year's Eve, Tomb Sweeping Day, compensatory days and holidays introduced by the [2025 reform](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095) are not included.
+
+Chile calculates recurring national holidays, including Easter, statutory weekday shifts and the winter-solstice holiday. Solstice predictions are supported through 2100. Election days, regional holidays and one-off declarations are not included. Historical calendars can omit repealed holidays; check the law in force for the year you need.
+
+Malaysia includes dated Wesak, Thaipusam and Deepavali records only for 2020 to 2026; outside that window those festivals are absent, so the result is not a complete official calendar. Lunar calculations use the traditional Chinese calendar. Local announcements and observed-day rules can differ between countries and regions.
+
+Other year-specific calendars have their own limits. India's dated calendars cover 1970 to 2037, Nepal supports 2024 to 2025, and Spain's regional data covers 2022 to 2027. Missing required data returns an error. Check official announcements before using results for legal or payroll decisions.
